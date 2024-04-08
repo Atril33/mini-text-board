@@ -5,15 +5,23 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+    <header>
     <h1><%= title %></h1>
+  </header>
 <div class="message-container">
   <% messages.forEach((message) => { %>
     <div class="message">
-    <p><%= message.text %></p>
-    <h5><%= message.user %></h4>
-    <p><%= message.added %></p>
+    <p class="user-name"><%= message.user %></p>
+    <h5><%= message.text %></h4>
+    <p class="message-date"><%= message.added %></p>
   </div>
   <% }) %>
-  </dvi>
+</div>
+
+<form method="POST" action="/">
+  <input type="text" name="user" placeholder="User" required>
+  <input type="text" name="text" placeholder="Enter Your Message Here" required>
+  <button type="submit">Submit</button>
+</form>     
   </body>
 </html>
