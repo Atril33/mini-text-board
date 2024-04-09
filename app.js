@@ -6,7 +6,7 @@ var logger = require('morgan');
 const mongoose = require('mongoose');
 
 
-const mongoDB = 'mongodb+srv://atril3123:NBvBiWLR7LpKSDcU@developerdb.brhu2mj.mongodb.net/';
+const mongoDB = 'mongodb://localhost:27017/mini_text';
 
 mongoose.connect(mongoDB);
 
